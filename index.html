@@ -20,50 +20,12 @@ scroll-behavior:smooth;
 body{
 background:#f5f1ea;
 color:#222;
-overflow-x:hidden;
 }
 
-/* NAVBAR */
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav h3{
-color:white;
-letter-spacing:2px;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#ff6b35;
-}
-
-/* HERO */
+/* HERO SECTION */
 header{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
 url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
 background-size:cover;
 background-position:center;
@@ -74,29 +36,175 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-position:relative;
 }
 
-header::after{
-content:"";
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:120px;
-background:url('https://i.ibb.co/4fKQ9kM/forest.png');
-background-size:cover;
+header h1{
+font-size:50px;
+font-weight:700;
+}
+
+header p{
+margin-top:15px;
+font-size:20px;
+max-width:700px;
 }
 
 .profile-photo{
 width:180px;
 height:180px;
 border-radius:50%;
-border:4px solid white;
 margin-bottom:20px;
+border:4px solid white;
 object-fit:cover;
-animation:fadeIn 2s ease;
 }
 
-header h1{
-font-size:
+/* WAVE EFFECT */
+.wave{
+position:relative;
+margin-top:-5px;
+}
+
+.wave svg{
+display:block;
+}
+
+/* LIGHT SECTION */
+section{
+padding:80px 10%;
+background:#f5f1ea;
+}
+
+.section-dark{
+background:#1c1c1c;
+color:white;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:34px;
+}
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:30px;
+width:300px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* SOCIAL */
+.social-icons{
+margin-top:25px;
+display:flex;
+gap:40px;
+}
+
+.social-icons div{
+text-align:center;
+}
+
+.social-icons a{
+color:#ff6b35;
+font-size:28px;
+}
+
+.social-icons p{
+margin-top:6px;
+font-size:14px;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+header h1{font-size:36px;}
+.card-container{flex-direction:column; align-items:center;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="touhid.JPG" class="profile-photo">
+<h1>Touhid Hassan</h1>
+<p>Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech Enthusiast</p>
+
+<div class="social-icons">
+<div>
+<a href="https://www.instagram.com/touhid_empire" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<p>@touhid_empire</p>
+</div>
+
+<div>
+<a href="https://wa.me/919332838418" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<p>9332838418</p>
+</div>
+</div>
+</header>
+
+<div class="wave">
+<svg viewBox="0 0 1440 120">
+<path fill="#f5f1ea" fill-opacity="1"
+d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53,1360,42.7L1440,32V160H0Z">
+</path>
+</svg>
+</div>
+
+<section>
+<h2>About Me</h2>
+<div class="card-container">
+<div class="card">
+<p>I am a passionate and ambitious B.A graduate from Asansol, West Bengal. My dream is to become a successful doctor and contribute to society.</p>
+</div>
+</div>
+</section>
+
+<section class="section-dark">
+<h2>Education</h2>
+<div class="card-container">
+<div class="card">
+<p>Bachelor of Arts (B.A) – Completed</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Certifications & Achievements</h2>
+<div class="card-container">
+<div class="card">
+<p>✔ Certificate in Computer Application</p>
+<p>✔ Advanced Computer Skills Certification</p>
+<p>✔ 1st Position – Intercity Debate Competition</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Touhid Hassan | All Rights Reserved
+</footer>
+
+</body>
+</html>
