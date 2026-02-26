@@ -6,44 +6,52 @@
 
 <title>Touhid Hassan | Ultra Premium Portfolio</title>
 
-<!-- Google Verification Meta -->
 <meta name="google-site-verification" content="-sXW6_cXc4VASxUKHyR3lC3DQHrGU3q7RfCPGsGZvtI" />
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
 <style>
-/* ---- Basic Reset ---- */
-*{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; scroll-behavior:smooth;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-/* ---- Dark + Colorful Gradient Animated Background ---- */
 body{
-    color:white;
-    background: linear-gradient(45deg, #ff6b6b, #facc15, #38bdf8, #7c3aed, #10b981, #f43f5e);
-    background-size: 600% 600%;
-    animation: gradientBG 20s ease infinite;
+color:white;
+background:#0f172a;
 }
 
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    16%{background-position:20% 50%;}
-    32%{background-position:40% 50%;}
-    48%{background-position:60% 50%;}
-    64%{background-position:80% 50%;}
-    80%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* Section Colors */
+header{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);}
+#about{background:linear-gradient(135deg,#1e3c72,#2a5298);}
+#education{background:linear-gradient(135deg,#42275a,#734b6d);}
+#certifications{background:linear-gradient(135deg,#134e5e,#71b280);}
+#skills{background:linear-gradient(135deg,#3a1c71,#d76d77,#ffaf7b);}
+#projects{background:linear-gradient(135deg,#16222a,#3a6073);}
+#contact{background:linear-gradient(135deg,#000428,#004e92);}
+
+header{
+text-align:center;
+padding:80px 20px;
 }
 
-/* ---- Header ---- */
-header{text-align:center; padding:80px 20px;}
-header h1{font-size:48px; font-weight:800; text-shadow:0 0 20px #00c6ff;}
-header p{margin-top:12px; font-size:20px; opacity:0.9; line-height:1.6; text-shadow:0 0 10px #38bdf8;}
+header h1{
+font-size:48px;
+font-weight:800;
+text-shadow:0 0 20px #00c6ff;
+}
+
+header p{
+margin-top:12px;
+font-size:20px;
+opacity:0.9;
+line-height:1.6;
+}
 
 .profile-photo{
 width:200px;
@@ -52,92 +60,132 @@ border-radius:50%;
 border:4px solid #00c6ff;
 margin:20px auto;
 display:block;
-box-shadow:0 0 35px #00c6ff,0 0 50px #38bdf8 inset;
+box-shadow:0 0 35px #00c6ff;
 }
 
-/* ---- Buttons ---- */
-.btn{
-display:inline-block; margin:20px 10px; padding:14px 28px;
-border-radius:35px; text-decoration:none; color:white;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.2);
-transition:0.4s; font-weight:600; box-shadow:0 0 12px rgba(0,198,255,0.4);
-}
-.btn:hover{
-background:linear-gradient(45deg,#00c6ff,#38bdf8,#3b82f6,#f43f5e,#facc15);
-box-shadow:0 0 25px #00c6ff,0 0 35px #38bdf8 inset;
-transform:translateY(-4px);
+section{
+padding:80px 10%;
 }
 
-/* ---- Sections ---- */
-section{padding:80px 10%;}
-h2{text-align:center; margin-bottom:50px; font-size:36px; text-shadow:0 0 15px #00c6ff;}
+h2{
+text-align:center;
+margin-bottom:50px;
+font-size:36px;
+text-shadow:0 0 15px #00c6ff;
+}
 
-/* ---- Glass Cards ---- */
-.card-container{display:flex; gap:30px; flex-wrap:wrap; justify-content:center;}
+.card-container{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
 .card{
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.08);
 backdrop-filter:blur(18px);
 border-radius:25px;
-padding:35px; width:300px;
-transition:0.5s; border:1px solid rgba(255,255,255,0.15);
-box-shadow:0 0 15px rgba(0,198,255,0.3);
+padding:35px;
+width:300px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.15);
 }
+
 .card:hover{
-transform:translateY(-12px);
-box-shadow:0 0 35px rgba(0,198,255,0.6),0 0 50px rgba(56,189,248,0.5) inset;
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,198,255,0.6);
 }
 
-/* ---- Social Icons ---- */
-.social-icons{display:flex; justify-content:center; gap:25px; margin-top:15px;}
-.social-icons a{color:#38bdf8; font-size:28px; transition:0.4s;}
-.social-icons a:hover{color:#00c6ff; transform:scale(1.2); text-shadow:0 0 15px #00c6ff;}
+/* Social Icons */
+.social-icons{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:25px;
+}
 
-/* ---- Contact Section ---- */
-.contact-card a{color:#00fff5; text-decoration:none; transition:0.3s;}
-.contact-card a:hover{color:#00c6ff; text-shadow:0 0 15px #00c6ff; transform:translateY(-2px);}
+.social-icons div{
+text-align:center;
+}
 
-/* ---- Footer ---- */
-footer{text-align:center; padding:30px; opacity:0.8; text-shadow:0 0 8px #38bdf8;}
+.social-icons a{
+color:#38bdf8;
+font-size:32px;
+transition:0.4s;
+}
 
-/* ---- Responsive ---- */
+.social-icons a:hover{
+color:#00c6ff;
+transform:scale(1.2);
+}
+
+.social-icons p{
+margin-top:8px;
+font-size:14px;
+opacity:0.85;
+}
+
+.contact-card a{
+color:#00fff5;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.8;
+}
+
 @media(max-width:768px){
-.card-container{flex-direction:column; align-items:center;}
-header h1{font-size:38px;}
-header p{font-size:18px;}
-h2{font-size:28px;}
+.card-container{
+flex-direction:column;
+align-items:center;
+}
+header h1{font-size:36px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== Header ===== -->
 <header>
 <img src="touhid.JPG" alt="Touhid Hassan" class="profile-photo" data-aos="zoom-in">
 <h1 data-aos="fade-down">Hi, I'm Touhid Hassan</h1>
-<p data-aos="fade-up">Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech-Skilled Professional</p>
+<p data-aos="fade-up">
+Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech-Skilled Professional
+</p>
 
 <div class="social-icons" data-aos="fade-up">
-<a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/919332838418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<div>
+<a href="https://www.instagram.com/touhid_empire" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<p>@touhid_empire</p>
 </div>
 
-<a href="#projects" class="btn" data-aos="zoom-in">View Projects</a>
+<div>
+<a href="https://wa.me/919332838418" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<p>9332838418</p>
+</div>
+</div>
 </header>
 
-<!-- ===== About Me ===== -->
 <section id="about">
 <h2 data-aos="fade-up">About Me</h2>
 <div class="card-container">
 <div class="card" data-aos="fade-right">
-<p>I am a passionate and ambitious B.A graduate from Asansol, West Bengal. My goal is to become a successful doctor and contribute to society. I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.</p>
+<p>
+I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
+My goal is to become a successful doctor and contribute to society. 
+I have achieved 1st position in an Intercity Debate Competition and 
+hold multiple certifications in Computer Applications.
+</p>
 </div>
 </div>
 </section>
 
-<!-- ===== Education ===== -->
 <section id="education">
 <h2 data-aos="fade-up">Education</h2>
 <div class="card-container">
@@ -147,7 +195,6 @@ h2{font-size:28px;}
 </div>
 </section>
 
-<!-- ===== Certifications & Achievements ===== -->
 <section id="certifications">
 <h2 data-aos="fade-up">Certifications & Achievements</h2>
 <div class="card-container">
@@ -159,7 +206,6 @@ h2{font-size:28px;}
 </div>
 </section>
 
-<!-- ===== Skills ===== -->
 <section id="skills">
 <h2 data-aos="fade-up">Skills</h2>
 <div class="card-container">
@@ -172,7 +218,6 @@ h2{font-size:28px;}
 </div>
 </section>
 
-<!-- ===== Projects ===== -->
 <section id="projects">
 <h2 data-aos="fade-up">Projects</h2>
 <div class="card-container">
@@ -193,7 +238,6 @@ h2{font-size:28px;}
 </div>
 </section>
 
-<!-- ===== Contact ===== -->
 <section id="contact">
 <h2 data-aos="fade-up">Contact</h2>
 <div class="card-container">
@@ -207,12 +251,10 @@ h2{font-size:28px;}
 </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer>
 © 2026 Touhid Hassan | All Rights Reserved
 </footer>
 
-<!-- ===== Scripts ===== -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1200, once:true});
