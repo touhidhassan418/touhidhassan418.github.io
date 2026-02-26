@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Touhid Hassan | Premium Portfolio</title>
+<title>Touhid Hassan | Royal Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
 <style>
 *{
@@ -17,54 +18,51 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f1ea;
-color:#222;
-transition:0.4s;
-}
-
-body.dark{
-background:#121212;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 nav{
 position:fixed;
-top:0;
 width:100%;
+top:0;
+left:0;
 padding:15px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
+nav h3{
+color:#ffd700;
+letter-spacing:2px;
 }
 
-.toggle-btn{
-background:#ff6b35;
-border:none;
-padding:6px 12px;
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
 color:white;
-cursor:pointer;
-border-radius:5px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
 }
 
 /* HERO */
 header{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
-background-size:cover;
-background-position:center;
-color:white;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -73,58 +71,86 @@ text-align:center;
 padding:20px;
 }
 
+.profile-photo{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #ffd700;
+margin-bottom:20px;
+object-fit:cover;
+animation:fadeIn 2s ease;
+}
+
 header h1{
 font-size:48px;
+color:#ffd700;
 }
 
 header p{
 margin-top:15px;
+font-size:18px;
+max-width:700px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
 padding:100px 10%;
 }
 
 h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:50px;
+font-size:34px;
+color:#ffd700;
 }
 
-/* CARDS */
+/* CARD */
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
 .card{
-background:white;
+background:rgba(255,255,255,0.08);
 padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-margin-bottom:30px;
-transition:0.3s;
+width:320px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 8px 30px rgba(0,0,0,0.5);
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
 }
 
-body.dark .card{
-background:#1e1e1e;
-color:white;
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-10px) scale(1.05);
 }
 
-/* SKILLS */
+/* SKILL BARS */
 .skill{
-margin-bottom:20px;
+margin-bottom:15px;
+}
+
+.skill-name{
+margin-bottom:5px;
 }
 
 .skill-bar{
-height:10px;
-background:#ddd;
-border-radius:10px;
+background:#333;
+border-radius:20px;
 overflow:hidden;
 }
 
 .skill-fill{
-height:100%;
-background:#ff6b35;
+height:8px;
+background:#ffd700;
 width:0;
 transition:2s;
 }
@@ -138,35 +164,42 @@ max-width:500px;
 margin:auto;
 }
 
-input, textarea{
+input,textarea{
 padding:10px;
+border:none;
 border-radius:8px;
-border:1px solid #ccc;
+outline:none;
 }
 
 button{
-background:#ff6b35;
+padding:12px;
 border:none;
-padding:10px;
-color:white;
+background:#ffd700;
+color:black;
+font-weight:600;
 border-radius:8px;
 cursor:pointer;
+transition:0.3s;
 }
 
-/* ANIMATION */
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+button:hover{
+background:white;
 }
 
-.show{
-opacity:1;
-transform:translateY(0);
+/* FOOTER */
+footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:50px;
+color:#aaa;
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
-header h1{font-size:32px;}
+nav ul{display:none;}
+header h1{font-size:36px;}
+.card-container{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -174,71 +207,77 @@ header h1{font-size:32px;}
 <body>
 
 <nav>
-<div style="color:white;font-weight:600;">Touhid Hassan</div>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-<button class="toggle-btn" onclick="toggleMode()">🌙</button>
-</div>
+<h3>TOUHID</h3>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <header>
+<img src="touhid.JPG" class="profile-photo">
 <h1>Touhid Hassan</h1>
-<p>Future Doctor | Debate Winner | Tech Enthusiast</p>
+<p>Future Doctor | B.A Graduate | Debate Champion | Tech Enthusiast</p>
 </header>
 
-<section id="about" class="hidden">
+<section id="about">
 <h2>About Me</h2>
+<div class="card-container">
 <div class="card">
+<p>
 I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
 My goal is to become a successful doctor and contribute to society. 
 I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.
+</p>
+</div>
 </div>
 </section>
 
-<section id="education" class="hidden">
+<section id="education">
 <h2>Education</h2>
+<div class="card-container">
 <div class="card">
-Bachelor of Arts (B.A) - Completed
+<p>Bachelor of Arts (B.A) - Completed</p>
+</div>
 </div>
 </section>
 
-<section id="skills" class="hidden">
+<section id="skills">
 <h2>Skills</h2>
-
+<div class="card-container">
+<div class="card">
 <div class="skill">
-<p>Computer Applications & MS Office</p>
+<div class="skill-name">Computer Applications & MS Office</div>
 <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
 </div>
-
 <div class="skill">
-<p>Public Speaking & Debate</p>
+<div class="skill-name">Public Speaking & Debate</div>
 <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
 </div>
-
 <div class="skill">
-<p>Communication & Leadership</p>
+<div class="skill-name">Communication & Leadership</div>
 <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
 </div>
-
 <div class="skill">
-<p>Time Management</p>
+<div class="skill-name">Time Management</div>
 <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
 </div>
-
+</div>
+</div>
 </section>
 
-<section id="contact" class="hidden">
-<h2>Contact Me</h2>
-
+<section id="contact">
+<h2>Contact</h2>
+<div class="card-container">
 <div class="card">
 <p>Email: monsternoddy@gmail.com</p>
 <p>Email: touhidhassan418@gmail.com</p>
 <p>Phone: 9332838418</p>
 <p>Phone: 8389878532</p>
 <p>Location: Asansol, West Bengal, India</p>
+</div>
 </div>
 
 <form>
@@ -250,22 +289,23 @@ Bachelor of Arts (B.A) - Completed
 
 </section>
 
+<footer>
+© 2026 Touhid Hassan | Royal Portfolio
+</footer>
+
 <script>
-function toggleMode(){
-document.body.classList.toggle("dark");
-}
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
+/* Scroll Reveal */
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+const cardTop = card.getBoundingClientRect().top;
+if(cardTop < window.innerHeight - 100){
+card.classList.add('show');
 }
 });
 });
 
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
 </script>
 
 </body>
