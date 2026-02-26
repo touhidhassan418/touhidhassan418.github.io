@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Touhid Hassan | Elite Portfolio</title>
+<title>Touhid Hassan | Royal Elite Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
 *{
@@ -17,72 +20,59 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0f0c29;
+background:#0f0f0f;
 color:white;
 overflow-x:hidden;
+transition:0.4s;
 }
 
-/* LOADING SCREEN */
+.light-mode{
+background:#f5f1ea;
+color:#222;
+}
+
+/* LOADER */
 #loader{
 position:fixed;
 width:100%;
-height:100%;
+height:100vh;
 background:#000;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:28px;
-color:#ffd700;
 z-index:9999;
+color:#ffcc00;
+font-size:28px;
 letter-spacing:3px;
-}
-
-/* 3D ANIMATED BACKGROUND */
-.background{
-position:fixed;
-width:100%;
-height:100%;
-background:radial-gradient(circle at 20% 30%,#302b63,#0f0c29);
-z-index:-2;
-}
-
-.cube{
-position:absolute;
-width:20px;
-height:20px;
-background:#ffd700;
-opacity:0.3;
-animation:move 15s linear infinite;
-}
-
-@keyframes move{
-0%{transform:translateY(100vh) rotate(0deg);}
-100%{transform:translateY(-10vh) rotate(360deg);}
 }
 
 /* NAVBAR */
 nav{
 position:fixed;
-top:0;
 width:100%;
-padding:15px 10%;
+top:0;
 display:flex;
 justify-content:space-between;
+padding:15px 8%;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav h3{
-color:#ffd700;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
 }
 
-nav button{
-background:#ffd700;
-border:none;
-padding:8px 15px;
-border-radius:20px;
+.toggle-btn{
 cursor:pointer;
+background:#ffcc00;
+border:none;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
 }
 
 /* HERO */
@@ -93,185 +83,229 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+position:relative;
 }
 
-header h1{
-font-size:48px;
-color:#ffd700;
+#particles-js{
+position:absolute;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.profile-photo{
+width:170px;
+height:170px;
+border-radius:50%;
+border:3px solid #ffcc00;
+margin-bottom:20px;
+}
+
+h1{
+font-size:45px;
 }
 
 .typing{
-margin-top:15px;
+color:#ffcc00;
+margin-top:10px;
 font-size:20px;
-height:30px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 padding:100px 10%;
-}
-
-h2{
 text-align:center;
-margin-bottom:40px;
-color:#ffd700;
-}
-
-.card-container{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.05);
 padding:30px;
-width:320px;
-border-radius:20px;
+margin:20px auto;
+max-width:600px;
+border-radius:15px;
 backdrop-filter:blur(10px);
-box-shadow:0 8px 30px rgba(0,0,0,0.5);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.05);
+transform:translateY(-10px);
 }
 
-/* DASHBOARD STATS */
-.stats{
+/* SKILL BARS */
+.skill{
+margin:15px 0;
+text-align:left;
+}
+
+.bar{
+height:8px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+width:0;
+background:#ffcc00;
+transition:2s;
+}
+
+/* CONTACT FORM */
+form{
 display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+margin:0 auto;
 }
 
-.stat-box{
-background:#111;
-padding:30px;
-border-radius:15px;
-text-align:center;
-width:200px;
-box-shadow:0 0 20px rgba(255,215,0,0.4);
+input,textarea{
+padding:10px;
+border:none;
+border-radius:8px;
 }
 
-.stat-box h3{
-color:#ffd700;
-font-size:32px;
+button{
+padding:10px;
+border:none;
+background:#ffcc00;
+cursor:pointer;
+border-radius:20px;
 }
 
-/* FOOTER */
-footer{
-background:black;
-text-align:center;
-padding:20px;
-color:#aaa;
-}
-
-@media(max-width:768px){
-.card-container,.stats{flex-direction:column;align-items:center;}
+/* GLOW CURSOR */
+.cursor{
+width:20px;
+height:20px;
+border:2px solid #ffcc00;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+transition:0.1s;
+z-index:999;
 }
 </style>
 </head>
 
 <body>
 
-<div id="loader">LOADING ROYAL EXPERIENCE...</div>
-
-<div class="background" id="bg"></div>
-
-<audio id="bgMusic" loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-</audio>
+<div id="loader">WELCOME TO MY ROYAL PORTFOLIO</div>
+<div class="cursor"></div>
 
 <nav>
-<h3>TOUHID</h3>
-<button onclick="toggleMusic()">🎵 Music</button>
+<div><strong>Touhid Hassan</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<button class="toggle-btn" onclick="toggleMode()">Mode</button>
+<button class="toggle-btn" onclick="toggleMusic()">Music</button>
+</div>
 </nav>
 
 <header>
+<div id="particles-js"></div>
+<img src="touhid.JPG" class="profile-photo">
 <h1>Touhid Hassan</h1>
-<div class="typing" id="typing"></div>
+<div class="typing"></div>
 </header>
 
-<section>
+<section id="about">
 <h2>About Me</h2>
-<div class="card-container">
 <div class="card">
 I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
 My goal is to become a successful doctor and contribute to society. 
 I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.
 </div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="card">
+
+<div class="skill">
+Computer Applications & MS Office
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+Public Speaking & Debate
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill">
+Communication & Leadership
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill">
+Time Management
+<div class="bar"><span style="width:75%"></span></div>
+</div>
+
 </div>
 </section>
 
-<section>
-<h2>Admin Dashboard</h2>
-<div class="stats">
-<div class="stat-box">
-<h3>5+</h3>
-<p>Certifications</p>
-</div>
-<div class="stat-box">
-<h3>10+</h3>
-<p>Debates Participated</p>
-</div>
-<div class="stat-box">
-<h3>1st</h3>
-<p>Intercity Winner</p>
-</div>
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="card">
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+<br>
+<p>Email: monsternoddy@gmail.com</p>
+<p>Email: touhidhassan418@gmail.com</p>
+<p>Phone: 9332838418</p>
+<p>Phone: 8389878532</p>
+<p>Location: Asansol, West Bengal, India</p>
 </div>
 </section>
 
-<footer>
-© 2026 Touhid Hassan | Elite Portfolio
-</footer>
+<audio id="bg-music" loop>
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8e6b0e7c0.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-
-/* Loader */
 window.onload=function(){
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},2000);
-};
-
-/* Typing Effect */
-const textArray=["Future Doctor","Debate Champion","Tech Enthusiast"];
-let i=0,j=0,currentText="",isDeleting=false;
-function type(){
-currentText=textArray[i];
-if(!isDeleting){
-document.getElementById("typing").innerHTML=currentText.slice(0,++j);
-if(j===currentText.length){isDeleting=true;setTimeout(type,1000);return;}
-}else{
-document.getElementById("typing").innerHTML=currentText.slice(0,--j);
-if(j===0){isDeleting=false;i=(i+1)%textArray.length;}
-}
-setTimeout(type,100);
-}
-type();
-
-/* 3D Moving Cubes */
-for(let i=0;i<40;i++){
-let cube=document.createElement("div");
-cube.classList.add("cube");
-cube.style.left=Math.random()*100+"%";
-cube.style.animationDuration=(Math.random()*10+10)+"s";
-document.getElementById("bg").appendChild(cube);
+setTimeout(()=>{document.getElementById("loader").style.display="none";},2500);
+new Typed(".typing",{
+strings:["Future Doctor","Debate Champion","Tech Enthusiast"],
+typeSpeed:60,
+backSpeed:40,
+loop:true
+});
 }
 
-/* Music Toggle */
-const music=document.getElementById("bgMusic");
+function toggleMode(){
+document.body.classList.toggle("light-mode");
+}
+
 function toggleMusic(){
-if(music.paused){
-music.play();
-}else{
-music.pause();
-}
+let music=document.getElementById("bg-music");
+music.paused?music.play():music.pause();
 }
 
+/* PARTICLES */
+particlesJS("particles-js",{
+particles:{number:{value:60},
+size:{value:3},
+color:{value:"#ffcc00"},
+line_linked:{enable:true,color:"#ffcc00"},
+move:{speed:2}}
+});
+
+/* GLOW CURSOR */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+});
 </script>
 
 </body>
