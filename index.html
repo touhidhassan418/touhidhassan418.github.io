@@ -68,7 +68,7 @@ margin-top:-5px;
 display:block;
 }
 
-/* LIGHT SECTION */
+/* SECTION STYLE */
 section{
 padding:80px 10%;
 background:#f5f1ea;
@@ -95,7 +95,7 @@ justify-content:center;
 .card{
 background:white;
 padding:30px;
-width:300px;
+width:320px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 transition:0.3s;
@@ -103,6 +103,11 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
+}
+
+.section-dark .card{
+background:#2b2b2b;
+color:white;
 }
 
 /* SOCIAL */
@@ -134,6 +139,7 @@ text-align:center;
 padding:25px;
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
 header h1{font-size:36px;}
 .card-container{flex-direction:column; align-items:center;}
@@ -146,7 +152,7 @@ header h1{font-size:36px;}
 <header>
 <img src="touhid.JPG" class="profile-photo">
 <h1>Touhid Hassan</h1>
-<p>Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech Enthusiast</p>
+<p>Future Doctor | B.A Graduate | Debate Winner | Tech Enthusiast</p>
 
 <div class="social-icons">
 <div>
@@ -177,7 +183,11 @@ d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53
 <h2>About Me</h2>
 <div class="card-container">
 <div class="card">
-<p>I am a passionate and ambitious B.A graduate from Asansol, West Bengal. My dream is to become a successful doctor and contribute to society.</p>
+<p>
+I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
+My goal is to become a successful doctor and contribute to society. 
+I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.
+</p>
 </div>
 </div>
 </section>
@@ -186,7 +196,7 @@ d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53
 <h2>Education</h2>
 <div class="card-container">
 <div class="card">
-<p>Bachelor of Arts (B.A) – Completed</p>
+<p>Bachelor of Arts (B.A) - Completed</p>
 </div>
 </div>
 </section>
@@ -197,7 +207,32 @@ d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53
 <div class="card">
 <p>✔ Certificate in Computer Application</p>
 <p>✔ Advanced Computer Skills Certification</p>
-<p>✔ 1st Position – Intercity Debate Competition</p>
+<p>✔ 1st Position - Intercity Debate Competition</p>
+</div>
+</div>
+</section>
+
+<section class="section-dark">
+<h2>Skills</h2>
+<div class="card-container">
+<div class="card">
+<p>✔ Computer Applications & MS Office</p>
+<p>✔ Public Speaking & Debate</p>
+<p>✔ Communication & Leadership</p>
+<p>✔ Time Management</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card-container">
+<div class="card">
+<p><strong>Email:</strong> monsternoddy@gmail.com</p>
+<p><strong>Email:</strong> touhidhassan418@gmail.com</p>
+<p><strong>Phone:</strong> 9332838418</p>
+<p><strong>Phone:</strong> 8389878532</p>
+<p><strong>Location:</strong> Asansol, West Bengal, India</p>
 </div>
 </div>
 </section>
