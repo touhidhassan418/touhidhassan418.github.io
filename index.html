@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Touhid Hassan | Premium Portfolio</title>
 
-<title>Touhid Hassan | Ultra Premium Portfolio</title>
-
-<meta name="google-site-verification" content="-sXW6_cXc4VASxUKHyR3lC3DQHrGU3q7RfCPGsGZvtI" />
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
 <style>
@@ -22,86 +18,98 @@ scroll-behavior:smooth;
 }
 
 body{
-color:white;
-background:#0f172a;
+background:#f5f1ea;
+color:#222;
 }
 
-/* Section Colors */
-header{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);}
-#about{background:linear-gradient(135deg,#1e3c72,#2a5298);}
-#education{background:linear-gradient(135deg,#42275a,#734b6d);}
-#certifications{background:linear-gradient(135deg,#134e5e,#71b280);}
-#skills{background:linear-gradient(135deg,#3a1c71,#d76d77,#ffaf7b);}
-#projects{background:linear-gradient(135deg,#16222a,#3a6073);}
-#contact{background:linear-gradient(135deg,#000428,#004e92);}
-
+/* HERO SECTION */
 header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+background-size:cover;
+background-position:center;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
+padding:20px;
 }
 
 header h1{
-font-size:48px;
-font-weight:800;
-text-shadow:0 0 20px #00c6ff;
+font-size:50px;
+font-weight:700;
 }
 
 header p{
-margin-top:12px;
+margin-top:15px;
 font-size:20px;
-opacity:0.9;
-line-height:1.6;
+max-width:700px;
 }
 
 .profile-photo{
-width:200px;
-height:200px;
+width:180px;
+height:180px;
 border-radius:50%;
-border:4px solid #00c6ff;
-margin:20px auto;
-display:block;
-box-shadow:0 0 35px #00c6ff;
+margin-bottom:20px;
+border:4px solid white;
+object-fit:cover;
 }
 
+/* WAVE EFFECT */
+.wave{
+position:relative;
+margin-top:-5px;
+}
+
+.wave svg{
+display:block;
+}
+
+/* LIGHT SECTION */
 section{
 padding:80px 10%;
+background:#f5f1ea;
+}
+
+.section-dark{
+background:#1c1c1c;
+color:white;
 }
 
 h2{
 text-align:center;
-margin-bottom:50px;
-font-size:36px;
-text-shadow:0 0 15px #00c6ff;
+margin-bottom:40px;
+font-size:34px;
 }
 
 .card-container{
 display:flex;
-gap:30px;
 flex-wrap:wrap;
+gap:30px;
 justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(18px);
-border-radius:25px;
-padding:35px;
+background:white;
+padding:30px;
 width:300px;
-transition:0.4s;
-border:1px solid rgba(255,255,255,0.15);
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px rgba(0,198,255,0.6);
+transform:translateY(-8px);
 }
 
-/* Social Icons */
+/* SOCIAL */
 .social-icons{
-display:flex;
-justify-content:center;
-gap:60px;
 margin-top:25px;
+display:flex;
+gap:40px;
 }
 
 .social-icons div{
@@ -109,39 +117,26 @@ text-align:center;
 }
 
 .social-icons a{
-color:#38bdf8;
-font-size:32px;
-transition:0.4s;
-}
-
-.social-icons a:hover{
-color:#00c6ff;
-transform:scale(1.2);
+color:#ff6b35;
+font-size:28px;
 }
 
 .social-icons p{
-margin-top:8px;
+margin-top:6px;
 font-size:14px;
-opacity:0.85;
 }
 
-.contact-card a{
-color:#00fff5;
-text-decoration:none;
-}
-
+/* FOOTER */
 footer{
+background:#111;
+color:#aaa;
 text-align:center;
-padding:30px;
-opacity:0.8;
+padding:25px;
 }
 
 @media(max-width:768px){
-.card-container{
-flex-direction:column;
-align-items:center;
-}
 header h1{font-size:36px;}
+.card-container{flex-direction:column; align-items:center;}
 }
 </style>
 </head>
@@ -149,13 +144,11 @@ header h1{font-size:36px;}
 <body>
 
 <header>
-<img src="touhid.JPG" alt="Touhid Hassan" class="profile-photo" data-aos="zoom-in">
-<h1 data-aos="fade-down">Hi, I'm Touhid Hassan</h1>
-<p data-aos="fade-up">
-Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech-Skilled Professional
-</p>
+<img src="touhid.JPG" class="profile-photo">
+<h1>Touhid Hassan</h1>
+<p>Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech Enthusiast</p>
 
-<div class="social-icons" data-aos="fade-up">
+<div class="social-icons">
 <div>
 <a href="https://www.instagram.com/touhid_empire" target="_blank">
 <i class="fab fa-instagram"></i>
@@ -172,33 +165,36 @@ Future Doctor in Making | B.A Graduate | Intercity Debate Winner | Tech-Skilled 
 </div>
 </header>
 
-<section id="about">
-<h2 data-aos="fade-up">About Me</h2>
+<div class="wave">
+<svg viewBox="0 0 1440 120">
+<path fill="#f5f1ea" fill-opacity="1"
+d="M0,64L80,74.7C160,85,320,107,480,112C640,117,800,107,960,90.7C1120,75,1280,53,1360,42.7L1440,32V160H0Z">
+</path>
+</svg>
+</div>
+
+<section>
+<h2>About Me</h2>
 <div class="card-container">
-<div class="card" data-aos="fade-right">
-<p>
-I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
-My goal is to become a successful doctor and contribute to society. 
-I have achieved 1st position in an Intercity Debate Competition and 
-hold multiple certifications in Computer Applications.
-</p>
+<div class="card">
+<p>I am a passionate and ambitious B.A graduate from Asansol, West Bengal. My dream is to become a successful doctor and contribute to society.</p>
 </div>
 </div>
 </section>
 
-<section id="education">
-<h2 data-aos="fade-up">Education</h2>
+<section class="section-dark">
+<h2>Education</h2>
 <div class="card-container">
-<div class="card" data-aos="fade-left">
+<div class="card">
 <p>Bachelor of Arts (B.A) – Completed</p>
 </div>
 </div>
 </section>
 
-<section id="certifications">
-<h2 data-aos="fade-up">Certifications & Achievements</h2>
+<section>
+<h2>Certifications & Achievements</h2>
 <div class="card-container">
-<div class="card" data-aos="fade-right">
+<div class="card">
 <p>✔ Certificate in Computer Application</p>
 <p>✔ Advanced Computer Skills Certification</p>
 <p>✔ 1st Position – Intercity Debate Competition</p>
@@ -206,59 +202,9 @@ hold multiple certifications in Computer Applications.
 </div>
 </section>
 
-<section id="skills">
-<h2 data-aos="fade-up">Skills</h2>
-<div class="card-container">
-<div class="card" data-aos="fade-up">
-<p>✔ Computer Applications & MS Office</p>
-<p>✔ Public Speaking & Debate</p>
-<p>✔ Communication & Leadership</p>
-<p>✔ Time Management</p>
-</div>
-</div>
-</section>
-
-<section id="projects">
-<h2 data-aos="fade-up">Projects</h2>
-<div class="card-container">
-<div class="card" data-aos="fade-right">
-<h3>Portfolio Website</h3>
-<p>Modern animated professional portfolio built using HTML & CSS.</p>
-</div>
-
-<div class="card" data-aos="fade-up">
-<h3>Academic Project</h3>
-<p>College based practical and research oriented project work.</p>
-</div>
-
-<div class="card" data-aos="fade-left">
-<h3>Future Startup Idea</h3>
-<p>Planning innovative digital solution for modern problems.</p>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<h2 data-aos="fade-up">Contact</h2>
-<div class="card-container">
-<div class="card contact-card" data-aos="fade-right">
-<p>Email: <a href="mailto:monsternoddy@gmail.com">monsternoddy@gmail.com</a></p>
-<p>Email: <a href="mailto:touhidhassan418@gmail.com">touhidhassan418@gmail.com</a></p>
-<p>Phone: <a href="tel:9332838418">9332838418</a></p>
-<p>Phone: <a href="tel:8389878532">8389878532</a></p>
-<p>Location: Asansol, West Bengal, India</p>
-</div>
-</div>
-</section>
-
 <footer>
 © 2026 Touhid Hassan | All Rights Reserved
 </footer>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({duration:1200, once:true});
-</script>
 
 </body>
 </html>
