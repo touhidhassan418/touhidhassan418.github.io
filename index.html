@@ -6,186 +6,81 @@
 <title>Touhid Hassan | Royal Elite Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f0f0f;
-color:white;
-overflow-x:hidden;
-transition:0.4s;
-}
-
-.light-mode{
-background:#f5f1ea;
-color:#222;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0f0f0f;color:white;overflow-x:hidden;transition:0.4s;}
+.light-mode{background:#f5f1ea;color:#222;}
 
 /* LOADER */
 #loader{
-position:fixed;
-width:100%;
-height:100vh;
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-color:#ffcc00;
-font-size:28px;
-letter-spacing:3px;
+position:fixed;width:100%;height:100vh;background:#000;
+display:flex;justify-content:center;align-items:center;
+z-index:9999;color:#ffcc00;font-size:26px;letter-spacing:3px;
 }
 
 /* NAVBAR */
 nav{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
+position:fixed;width:100%;top:0;
+display:flex;justify-content:space-between;
 padding:15px 8%;
 background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
+backdrop-filter:blur(10px);z-index:1000;
 }
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
-}
-
+nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px;}
 .toggle-btn{
-cursor:pointer;
-background:#ffcc00;
-border:none;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
+cursor:pointer;background:#ffcc00;border:none;
+padding:6px 14px;border-radius:20px;font-size:12px;
 }
 
 /* HERO */
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;text-align:center;
 position:relative;
 }
-
 #particles-js{
-position:absolute;
-width:100%;
-height:100%;
-z-index:-1;
+position:absolute;width:100%;height:100%;z-index:-1;
 }
-
 .profile-photo{
-width:170px;
-height:170px;
-border-radius:50%;
-border:3px solid #ffcc00;
-margin-bottom:20px;
+width:170px;height:170px;border-radius:50%;
+border:3px solid #ffcc00;margin-bottom:20px;
 }
+h1{font-size:45px;}
+.typing{color:#ffcc00;margin-top:10px;font-size:20px;}
 
-h1{
-font-size:45px;
-}
-
-.typing{
-color:#ffcc00;
-margin-top:10px;
-font-size:20px;
-}
-
-/* SECTIONS */
-section{
-padding:100px 10%;
-text-align:center;
-}
-
+/* SECTION */
+section{padding:100px 10%;text-align:center;}
 .card{
 background:rgba(255,255,255,0.05);
-padding:30px;
-margin:20px auto;
-max-width:600px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-transition:0.4s;
+padding:30px;margin:20px auto;
+max-width:700px;border-radius:15px;
+backdrop-filter:blur(10px);transition:0.4s;
 }
-
-.card:hover{
-transform:translateY(-10px);
-}
+.card:hover{transform:translateY(-10px);}
 
 /* SKILL BARS */
-.skill{
-margin:15px 0;
-text-align:left;
-}
-
-.bar{
-height:8px;
-background:#333;
-border-radius:20px;
-overflow:hidden;
-}
-
+.skill{margin:15px 0;text-align:left;}
+.bar{height:8px;background:#333;border-radius:20px;overflow:hidden;}
 .bar span{
-display:block;
-height:100%;
-width:0;
-background:#ffcc00;
-transition:2s;
-}
-
-/* CONTACT FORM */
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:500px;
-margin:0 auto;
-}
-
-input,textarea{
-padding:10px;
-border:none;
-border-radius:8px;
-}
-
-button{
-padding:10px;
-border:none;
-background:#ffcc00;
-cursor:pointer;
-border-radius:20px;
+display:block;height:100%;width:0;
+background:#ffcc00;transition:2s;
 }
 
 /* GLOW CURSOR */
 .cursor{
-width:20px;
-height:20px;
-border:2px solid #ffcc00;
-border-radius:50%;
-position:fixed;
-pointer-events:none;
+width:20px;height:20px;border:2px solid #ffcc00;
+border-radius:50%;position:fixed;pointer-events:none;
 transform:translate(-50%,-50%);
-transition:0.1s;
 z-index:999;
+}
+
+/* FOOTER */
+footer{
+text-align:center;padding:30px;
+background:#000;color:#aaa;
 }
 </style>
 </head>
@@ -199,6 +94,8 @@ z-index:999;
 <div><strong>Touhid Hassan</strong></div>
 <div>
 <a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#certifications">Achievements</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 <button class="toggle-btn" onclick="toggleMode()">Mode</button>
@@ -219,6 +116,22 @@ z-index:999;
 I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
 My goal is to become a successful doctor and contribute to society. 
 I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="card">
+Bachelor of Arts (B.A) - Completed
+</div>
+</section>
+
+<section id="certifications">
+<h2>Certifications & Achievements</h2>
+<div class="card">
+✔ Certificate in Computer Application <br><br>
+✔ Advanced Computer Skills Certification <br><br>
+✔ 1st Position - Intercity Debate Competition
 </div>
 </section>
 
@@ -250,23 +163,21 @@ Time Management
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 <div class="card">
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="4" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
-<br>
-<p>Email: monsternoddy@gmail.com</p>
-<p>Email: touhidhassan418@gmail.com</p>
-<p>Phone: 9332838418</p>
-<p>Phone: 8389878532</p>
-<p>Location: Asansol, West Bengal, India</p>
+Email: monsternoddy@gmail.com <br><br>
+Email: touhidhassan418@gmail.com <br><br>
+Phone: 9332838418 <br><br>
+Phone: 8389878532 <br><br>
+Location: Asansol, West Bengal, India
 </div>
 </section>
 
+<footer>
+© 2026 Touhid Hassan | Royal Elite Portfolio
+</footer>
+
+<!-- BACKGROUND MUSIC -->
 <audio id="bg-music" loop>
 <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8e6b0e7c0.mp3" type="audio/mpeg">
 </audio>
@@ -274,6 +185,7 @@ Time Management
 <script>
 window.onload=function(){
 setTimeout(()=>{document.getElementById("loader").style.display="none";},2500);
+
 new Typed(".typing",{
 strings:["Future Doctor","Debate Champion","Tech Enthusiast"],
 typeSpeed:60,
@@ -282,10 +194,12 @@ loop:true
 });
 }
 
+/* Mode Toggle */
 function toggleMode(){
 document.body.classList.toggle("light-mode");
 }
 
+/* Music Toggle */
 function toggleMusic(){
 let music=document.getElementById("bg-music");
 music.paused?music.play():music.pause();
@@ -293,11 +207,13 @@ music.paused?music.play():music.pause();
 
 /* PARTICLES */
 particlesJS("particles-js",{
-particles:{number:{value:60},
+particles:{
+number:{value:60},
 size:{value:3},
 color:{value:"#ffcc00"},
 line_linked:{enable:true,color:"#ffcc00"},
-move:{speed:2}}
+move:{speed:2}
+}
 });
 
 /* GLOW CURSOR */
