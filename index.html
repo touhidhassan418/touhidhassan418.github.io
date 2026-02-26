@@ -22,20 +22,22 @@
 /* ---- Basic Reset ---- */
 *{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; scroll-behavior:smooth;}
 
-/* ---- Dark Gradient Animated Background ---- */
+/* ---- Dark + Colorful Gradient Animated Background ---- */
 body{
-color:white;
-background: linear-gradient(45deg,#0f0c29,#302b63,#24243e,#1c1c1c,#0a192f,#1f1c2c);
-background-size:600% 600%;
-animation: gradientBG 20s ease infinite;
+    color:white;
+    background: linear-gradient(45deg, #ff6b6b, #facc15, #38bdf8, #7c3aed, #10b981, #f43f5e);
+    background-size: 600% 600%;
+    animation: gradientBG 20s ease infinite;
 }
+
 @keyframes gradientBG{
-0%{background-position:0% 50%;}
-20%{background-position:50% 50%;}
-40%{background-position:100% 50%;}
-60%{background-position:50% 50%;}
-80%{background-position:0% 50%;}
-100%{background-position:0% 50%;}
+    0%{background-position:0% 50%;}
+    16%{background-position:20% 50%;}
+    32%{background-position:40% 50%;}
+    48%{background-position:60% 50%;}
+    64%{background-position:80% 50%;}
+    80%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 /* ---- Header ---- */
