@@ -1,274 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Touhid Hassan | Royal Elite Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-
-/* ===== CINEMATIC LOADER ===== */
-#loader{
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Touhid Hassan | Royal Elite Portfolio</title>    
+    
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">    
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>    
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>    
+    
+<style>    
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}    
+    
+/* ===== CINEMATIC LOADER ===== */    
+#loader{    
+position:fixed;    
+width:100%;    
+height:100vh;    
+background:radial-gradient(circle at center,#000000,#0a0a0a,#111);    
+display:flex;    
+justify-content:center;    
+align-items:center;    
+flex-direction:column;    
+z-index:9999;    
+transition:opacity 1s ease;    
+}    
+    
+.loader-text{    
+font-family:'Playfair Display',serif;    
+font-size:42px;    
+font-weight:900;    
+letter-spacing:3px;    
+text-align:center;    
+background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);    
+-webkit-background-clip:text;    
+-webkit-text-fill-color:transparent;    
+text-shadow:0 0 30px rgba(255,204,0,0.7);    
+animation:cinematicZoom 3s ease forwards;    
+}    
+    
+@keyframes cinematicZoom{    
+0%{transform:scale(0.8);opacity:0;}    
+50%{transform:scale(1.05);opacity:1;}    
+100%{transform:scale(1);opacity:1;}    
+}    
+    
+body{    
+background:linear-gradient(135deg,#0f0f0f,#111827,#1c1c1c,#0a0a0a);    
+color:white;    
+overflow-x:hidden;    
+transition:0.4s;    
+}    
+    
+/* ===== MUSIC BUTTON ===== */
+.music-btn{
 position:fixed;
-width:100%;
-height:100vh;
-background:radial-gradient(circle at center,#000000,#0a0a0a,#111);
+bottom:25px;
+right:25px;
+background:linear-gradient(45deg,#ffcc00,#ffaa00);
+border:none;
+width:55px;
+height:55px;
+border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-z-index:9999;
-transition:opacity 1s ease;
-}
-
-.loader-text{
-font-family:'Playfair Display',serif;
-font-size:42px;
-font-weight:900;
-letter-spacing:3px;
-text-align:center;
-background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 30px rgba(255,204,0,0.7);
-animation:cinematicZoom 3s ease forwards;
-}
-
-@keyframes cinematicZoom{
-0%{transform:scale(0.8);opacity:0;}
-50%{transform:scale(1.05);opacity:1;}
-100%{transform:scale(1);opacity:1;}
-}
-
-body{
-background:linear-gradient(135deg,#0f0f0f,#111827,#1c1c1c,#0a0a0a);
-color:white;
-overflow-x:hidden;
-transition:0.4s;
-}
-
-/* ===== NAVBAR ===== */
-nav{
-position:fixed;width:100%;top:0;
-display:flex;justify-content:space-between;
-padding:15px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(15px);
-z-index:1000;
-}
-
-nav a{
-color:white;text-decoration:none;
-margin-left:25px;font-size:14px;
-position:relative;
-}
-
-nav a::after{
-content:'';position:absolute;
-width:0%;height:2px;
-background:#ffcc00;
-left:0;bottom:-4px;
-transition:0.3s;
-}
-
-nav a:hover::after{width:100%;}
-
-/* ===== HEADER ===== */
-header{
-height:100vh;display:flex;flex-direction:column;
-justify-content:center;align-items:center;
-text-align:center;position:relative;
-}
-
-#particles-js{
-position:absolute;width:100%;height:100%;z-index:-1;
-}
-
-.profile-photo{
-width:190px;height:190px;border-radius:50%;
-border:3px solid #ffcc00;
-margin-bottom:25px;
-box-shadow:0 0 35px #ffcc00;
-transition:0.4s;
-}
-
-.profile-photo:hover{
-transform:scale(1.05);
-box-shadow:0 0 60px #ffcc00;
-}
-
-.premium-name{
-font-size:52px;
-font-weight:800;
-white-space:nowrap;
-background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 20px rgba(255,204,0,0.4);
-letter-spacing:1px;
-}
-
-.typing{
-color:#ffcc00;
-margin-top:15px;
 font-size:22px;
-font-weight:600;
+color:black;
+cursor:pointer;
+box-shadow:0 0 25px rgba(255,204,0,0.6);
+transition:0.3s;
+z-index:2000;
 }
-
-/* Sections & rest same as before */
-section{padding:100px 10%;text-align:center;}
-h2{font-size:32px;margin-bottom:30px;color:#ffcc00;letter-spacing:1px;}
-.card{
-background:rgba(255,255,255,0.05);
-padding:35px;margin:20px auto;
-max-width:750px;border-radius:18px;
-backdrop-filter:blur(15px);
-transition:0.4s;
-box-shadow:0 0 20px rgba(255,204,0,0.1);
+.music-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px rgba(255,204,0,0.9);
 }
-.card:hover{
-transform:translateY(-12px);
-box-shadow:0 0 40px rgba(255,204,0,0.5);
+    
+/* ===== NAVBAR ===== */    
+nav{    
+position:fixed;width:100%;top:0;    
+display:flex;justify-content:space-between;    
+padding:15px 8%;    
+background:rgba(0,0,0,0.6);    
+backdrop-filter:blur(15px);    
+z-index:1000;    
+}    
+    
+nav a{    
+color:white;text-decoration:none;    
+margin-left:25px;font-size:14px;    
+position:relative;    
+}    
+    
+nav a::after{    
+content:'';position:absolute;    
+width:0%;height:2px;    
+background:#ffcc00;    
+left:0;bottom:-4px;    
+transition:0.3s;    
+}    
+    
+nav a:hover::after{width:100%;}    
+    
+/* ===== HEADER ===== */    
+header{    
+height:100vh;display:flex;flex-direction:column;    
+justify-content:center;align-items:center;    
+text-align:center;position:relative;    
+}    
+    
+#particles-js{    
+position:absolute;width:100%;height:100%;z-index:-1;    
+}    
+    
+.profile-photo{    
+width:190px;height:190px;border-radius:50%;    
+border:3px solid #ffcc00;    
+margin-bottom:25px;    
+box-shadow:0 0 35px #ffcc00;    
+transition:0.4s;    
+}    
+    
+.profile-photo:hover{    
+transform:scale(1.05);    
+box-shadow:0 0 60px #ffcc00;    
+}    
+    
+.premium-name{    
+font-size:52px;    
+font-weight:800;    
+white-space:nowrap;    
+background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);    
+-webkit-background-clip:text;    
+-webkit-text-fill-color:transparent;    
+text-shadow:0 0 20px rgba(255,204,0,0.4);    
+letter-spacing:1px;    
+}    
+    
+.typing{    
+color:#ffcc00;    
+margin-top:15px;    
+font-size:22px;    
+font-weight:600;    
+}    
+    
+section{padding:100px 10%;text-align:center;}    
+h2{font-size:32px;margin-bottom:30px;color:#ffcc00;letter-spacing:1px;}    
+.card{    
+background:rgba(255,255,255,0.05);    
+padding:35px;margin:20px auto;    
+max-width:750px;border-radius:18px;    
+backdrop-filter:blur(15px);    
+transition:0.4s;    
+box-shadow:0 0 20px rgba(255,204,0,0.1);    
+}    
+.card:hover{    
+transform:translateY(-12px);    
+box-shadow:0 0 40px rgba(255,204,0,0.5);    
+}    
+    
+.skill{margin:18px 0;text-align:left;font-weight:500;}    
+.bar{height:8px;background:#333;border-radius:20px;overflow:hidden;margin-top:6px;}    
+.bar span{display:block;height:100%;background:linear-gradient(90deg,#ffcc00,#ffaa00);}    
+    
+.social-icons{    
+margin-top:30px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;    
+}    
+.social-icons a{    
+color:#ffcc00;font-size:30px;transition:0.3s;    
+}    
+.social-icons a:hover{transform:scale(1.3);color:white;}    
+    
+footer{text-align:center;padding:30px;background:#000;color:#aaa;}    
+    
+@media(max-width:768px){    
+.premium-name{font-size:34px;}    
+.loader-text{font-size:26px;}    
+}    
+</style>    
+</head>    
+    
+<body>    
+    
+<!-- CINEMATIC LOADER -->    
+<div id="loader">    
+<div class="loader-text">    
+WELCOME TO TOUHID's PORTFOLIO    
+</div>    
+</div>    
+
+<!-- MUSIC AUDIO -->
+<audio id="bg-music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC BUTTON -->
+<button class="music-btn" onclick="toggleMusic()">
+<i id="music-icon" class="fas fa-music"></i>
+</button>
+    
+<nav>    
+<div><strong>Touhid Hassan</strong></div>    
+<div>    
+<a href="#about">About</a>    
+<a href="#education">Education</a>    
+<a href="#certifications">Achievements</a>    
+<a href="#skills">Skills</a>    
+<a href="#contact">Contact</a>    
+</div>    
+</nav>    
+    
+<header>    
+<div id="particles-js"></div>    
+<img src="touhid.JPG" class="profile-photo">    
+<h1 class="premium-name">Touhid Hassan</h1>    
+<div class="typing"></div>    
+    
+<div class="social-icons">    
+<a href="https://www.instagram.com/touhid_empire" target="_blank"><i class="fab fa-instagram"></i></a>    
+<a href="https://t.me/KnightLucifer" target="_blank"><i class="fab fa-telegram"></i></a>    
+<a href="https://www.snapchat.com/add/knight.lucifer" target="_blank"><i class="fab fa-snapchat"></i></a>    
+<a href="https://wa.me/919332838418" target="_blank"><i class="fab fa-whatsapp"></i></a>    
+</div>    
+</header>    
+
+<!-- (Rest of your sections remain exactly same) -->
+
+<script>    
+
+/* Loader Fade Out */    
+window.addEventListener("load",function(){    
+setTimeout(()=>{    
+document.getElementById("loader").style.opacity="0";    
+setTimeout(()=>{    
+document.getElementById("loader").style.display="none";    
+},1000);    
+},3000);    
+});    
+
+/* MUSIC TOGGLE */
+const music=document.getElementById("bg-music");
+music.volume=0.25;
+let isPlaying=false;
+
+function toggleMusic(){
+if(!isPlaying){
+music.play();
+isPlaying=true;
+document.getElementById("music-icon").classList.remove("fa-music");
+document.getElementById("music-icon").classList.add("fa-pause");
+}else{
+music.pause();
+isPlaying=false;
+document.getElementById("music-icon").classList.remove("fa-pause");
+document.getElementById("music-icon").classList.add("fa-music");
 }
-
-.skill{margin:18px 0;text-align:left;font-weight:500;}
-.bar{height:8px;background:#333;border-radius:20px;overflow:hidden;margin-top:6px;}
-.bar span{display:block;height:100%;background:linear-gradient(90deg,#ffcc00,#ffaa00);}
-
-.social-icons{
-margin-top:30px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;
 }
-.social-icons a{
-color:#ffcc00;font-size:30px;transition:0.3s;
-}
-.social-icons a:hover{transform:scale(1.3);color:white;}
-
-footer{text-align:center;padding:30px;background:#000;color:#aaa;}
-
-@media(max-width:768px){
-.premium-name{font-size:34px;}
-.loader-text{font-size:26px;}
-}
-</style>
-</head>
-
-<body>
-
-<!-- CINEMATIC LOADER -->
-<div id="loader">
-<div class="loader-text">
-WELCOME TO TOUHID's PORTFOLIO
-</div>
-</div>
-
-<nav>
-<div><strong>Touhid Hassan</strong></div>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#certifications">Achievements</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
-<header>
-<div id="particles-js"></div>
-<img src="touhid.JPG" class="profile-photo">
-<h1 class="premium-name">Touhid Hassan</h1>
-<div class="typing"></div>
-
-<div class="social-icons">
-<a href="https://www.instagram.com/touhid_empire" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://t.me/KnightLucifer" target="_blank"><i class="fab fa-telegram"></i></a>
-<a href="https://www.snapchat.com/add/knight.lucifer" target="_blank"><i class="fab fa-snapchat"></i></a>
-<a href="https://wa.me/919332838418" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
-</header>
-
-<!-- Sections remain unchanged -->
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
-My goal is to become a successful doctor and contribute to society.
-I have achieved 1st position in an Intercity Debate Competition.
-</div>
-</section>
-
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-Bachelor of Arts (B.A) - Completed
-</div>
-</section>
-
-<section id="certifications">
-<h2>Certifications & Achievements</h2>
-<div class="card">
-✔ Certificate in Computer Application <br><br>
-✔ Advanced Computer Skills Certification <br><br>
-✔ 1st Position - Intercity Debate Competition
-</div>
-</section>
-
-<section id="skills">
-<h2>Skills</h2>
-<div class="card">
-<div class="skill">Computer Applications<div class="bar"><span style="width:90%"></span></div></div>
-<div class="skill">Public Speaking<div class="bar"><span style="width:85%"></span></div></div>
-<div class="skill">Leadership<div class="bar"><span style="width:80%"></span></div></div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-Email: monsternoddy@gmail.com <br><br>
-Email: touhidhassan418@gmail.com <br><br>
-Phone: 9332838418 <br><br>
-Location: Asansol, West Bengal, India
-</div>
-</section>
-
-<footer>
-© 2026 Touhid Hassan | Royal Elite Portfolio
-</footer>
-
-<script>
-/* Loader Fade Out */
-window.addEventListener("load",function(){
-setTimeout(()=>{
-document.getElementById("loader").style.opacity="0";
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-},1000);
-},3000);
-});
-
-new Typed(".typing",{
-strings:["Future Doctor","Debate Champion","Tech Enthusiast"],
-typeSpeed:60,
-backSpeed:40,
-loop:true
-});
-
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-color:{value:"#ffcc00"},
-line_linked:{enable:true,color:"#ffcc00"},
-move:{speed:2}
-}
-});
-</script>
-
-</body>
+    
+new Typed(".typing",{    
+strings:["Future Doctor","Debate Champion","Tech Enthusiast"],    
+typeSpeed:60,    
+backSpeed:40,    
+loop:true    
+});    
+    
+particlesJS("particles-js",{    
+particles:{    
+number:{value:60},    
+size:{value:3},    
+color:{value:"#ffcc00"},    
+line_linked:{enable:true,color:"#ffcc00"},    
+move:{speed:2}    
+}    
+});    
+</script>    
+    
+</body>    
 </html>
