@@ -5,13 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Touhid Hassan | Royal Elite Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+/* ===== CINEMATIC LOADER ===== */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:radial-gradient(circle at center,#000000,#0a0a0a,#111);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+transition:opacity 1s ease;
+}
+
+.loader-text{
+font-family:'Playfair Display',serif;
+font-size:42px;
+font-weight:900;
+letter-spacing:3px;
+text-align:center;
+background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 30px rgba(255,204,0,0.7);
+animation:cinematicZoom 3s ease forwards;
+}
+
+@keyframes cinematicZoom{
+0%{transform:scale(0.8);opacity:0;}
+50%{transform:scale(1.05);opacity:1;}
+100%{transform:scale(1);opacity:1;}
+}
 
 body{
 background:linear-gradient(135deg,#0f0f0f,#111827,#1c1c1c,#0a0a0a);
@@ -24,7 +57,6 @@ transition:0.4s;
 nav{
 position:fixed;width:100%;top:0;
 display:flex;justify-content:space-between;
-align-items:center;
 padding:15px 8%;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(15px);
@@ -46,27 +78,6 @@ transition:0.3s;
 }
 
 nav a:hover::after{width:100%;}
-
-/* ===== MUSIC BUTTON ===== */
-.music-btn{
-margin-left:25px;
-background:#ffcc00;
-border:none;
-width:38px;
-height:38px;
-border-radius:50%;
-cursor:pointer;
-font-size:16px;
-display:flex;
-justify-content:center;
-align-items:center;
-transition:0.3s;
-}
-
-.music-btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #ffcc00;
-}
 
 /* ===== HEADER ===== */
 header{
@@ -110,10 +121,9 @@ font-size:22px;
 font-weight:600;
 }
 
-/* Sections */
+/* Sections & rest same as before */
 section{padding:100px 10%;text-align:center;}
 h2{font-size:32px;margin-bottom:30px;color:#ffcc00;letter-spacing:1px;}
-
 .card{
 background:rgba(255,255,255,0.05);
 padding:35px;margin:20px auto;
@@ -132,11 +142,8 @@ box-shadow:0 0 40px rgba(255,204,0,0.5);
 .bar span{display:block;height:100%;background:linear-gradient(90deg,#ffcc00,#ffaa00);}
 
 .social-icons{
-margin-top:30px;
-display:flex;justify-content:center;
-gap:30px;flex-wrap:wrap;
+margin-top:30px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap;
 }
-
 .social-icons a{
 color:#ffcc00;font-size:30px;transition:0.3s;
 }
@@ -146,25 +153,28 @@ footer{text-align:center;padding:30px;background:#000;color:#aaa;}
 
 @media(max-width:768px){
 .premium-name{font-size:34px;}
+.loader-text{font-size:26px;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- CINEMATIC LOADER -->
+<div id="loader">
+<div class="loader-text">
+WELCOME TO TOUHID's PORTFOLIO
+</div>
+</div>
+
 <nav>
 <div><strong>Touhid Hassan</strong></div>
-
-<div style="display:flex;align-items:center;">
+<div>
 <a href="#about">About</a>
 <a href="#education">Education</a>
 <a href="#certifications">Achievements</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
-
-<button class="music-btn" id="musicToggle">
-<i class="fas fa-volume-mute"></i>
-</button>
 </div>
 </nav>
 
@@ -182,9 +192,7 @@ footer{text-align:center;padding:30px;background:#000;color:#aaa;}
 </div>
 </header>
 
-<!-- Hidden Audio -->
-<audio id="bgMusic" src="music.mp3" loop></audio>
-
+<!-- Sections remain unchanged -->
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
@@ -234,7 +242,16 @@ Location: Asansol, West Bengal, India
 </footer>
 
 <script>
-/* Typing */
+/* Loader Fade Out */
+window.addEventListener("load",function(){
+setTimeout(()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},1000);
+},3000);
+});
+
 new Typed(".typing",{
 strings:["Future Doctor","Debate Champion","Tech Enthusiast"],
 typeSpeed:60,
@@ -242,7 +259,6 @@ backSpeed:40,
 loop:true
 });
 
-/* Particles */
 particlesJS("particles-js",{
 particles:{
 number:{value:60},
@@ -250,25 +266,6 @@ size:{value:3},
 color:{value:"#ffcc00"},
 line_linked:{enable:true,color:"#ffcc00"},
 move:{speed:2}
-}
-});
-
-/* ===== MUSIC CONTROL ===== */
-const music=document.getElementById("bgMusic");
-const toggleBtn=document.getElementById("musicToggle");
-const icon=toggleBtn.querySelector("i");
-
-music.volume=0.25;
-
-toggleBtn.addEventListener("click",()=>{
-if(music.paused){
-music.play();
-icon.classList.remove("fa-volume-mute");
-icon.classList.add("fa-volume-up");
-}else{
-music.pause();
-icon.classList.remove("fa-volume-up");
-icon.classList.add("fa-volume-mute");
 }
 });
 </script>
