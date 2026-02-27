@@ -5,261 +5,257 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Touhid Hassan | Royal Elite Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
 body{
-background:linear-gradient(135deg,#0f0f0f,#111827,#1c1c1c,#0a0a0a);
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
 color:white;
 overflow-x:hidden;
-transition:0.4s;
 }
 
-/* ===== NAVBAR ===== */
-nav{
-position:fixed;width:100%;top:0;
-display:flex;justify-content:space-between;
-padding:15px 8%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(15px);
-z-index:1000;
+/* PREMIUM LOADER */
+
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+flex-direction:column;
 }
 
-nav a{
-color:white;text-decoration:none;
-margin-left:25px;font-size:14px;
-position:relative;
+.loader-text{
+font-family:'Cinzel',serif;
+font-size:28px;
+color:gold;
+letter-spacing:3px;
+animation:blink 1.5s infinite;
 }
 
-nav a::after{
-content:'';position:absolute;
-width:0%;height:2px;
-background:#ffcc00;
-left:0;bottom:-4px;
-transition:0.3s;
+@keyframes blink{
+0%{opacity:1}
+50%{opacity:.3}
+100%{opacity:1}
 }
 
-nav a:hover::after{width:100%;}
+/* PARTICLE BACKGROUND */
 
-.toggle-btn{
-cursor:pointer;background:#ffcc00;border:none;
-padding:6px 14px;border-radius:20px;
-font-size:12px;margin-left:10px;font-weight:600;
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center,#1a1a1a,#000);
+z-index:-1;
+overflow:hidden;
 }
 
-/* ===== HEADER ===== */
-header{
-height:100vh;display:flex;flex-direction:column;
-justify-content:center;align-items:center;
-text-align:center;position:relative;
+.particle{
+position:absolute;
+width:3px;
+height:3px;
+background:gold;
+border-radius:50%;
+animation:move 10s linear infinite;
 }
 
-#particles-js{
-position:absolute;width:100%;height:100%;z-index:-1;
+@keyframes move{
+0%{transform:translateY(0)}
+100%{transform:translateY(-100vh)}
 }
 
-.profile-photo{
-width:190px;height:190px;border-radius:50%;
-border:3px solid #ffcc00;
-margin-bottom:25px;
-box-shadow:0 0 35px #ffcc00;
-transition:0.4s;
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-.profile-photo:hover{
-transform:scale(1.05);
-box-shadow:0 0 60px #ffcc00;
+/* PROFILE IMAGE */
+
+.hero img{
+width:230px;
+height:230px;
+border-radius:50%;
+border:4px solid gold;
+object-fit:cover;
+box-shadow:0 0 40px gold;
+transition:0.5s;
 }
 
-/* ===== ULTRA PREMIUM NAME ===== */
-.premium-name{
-font-size:52px;
-font-weight:800;
-white-space:nowrap;
-background:linear-gradient(90deg,#ffcc00,#ffd700,#ffaa00);
+.hero img:hover{
+transform:scale(1.08) rotate(3deg);
+box-shadow:0 0 60px gold;
+}
+
+/* PREMIUM NAME */
+
+.hero h1{
+margin-top:20px;
+font-family:'Cinzel',serif;
+font-size:48px;
+background:linear-gradient(90deg,gold,white,gold);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-text-shadow:0 0 20px rgba(255,204,0,0.4);
-letter-spacing:1px;
+animation:glow 3s infinite alternate;
+white-space:nowrap;
 }
 
-/* ===== TYPING ===== */
-.typing{
-color:#ffcc00;
-margin-top:15px;
-font-size:22px;
-font-weight:600;
+@keyframes glow{
+from{filter:drop-shadow(0 0 10px gold);}
+to{filter:drop-shadow(0 0 30px gold);}
 }
 
-/* ===== SECTIONS ===== */
-section{
-padding:100px 10%;
-text-align:center;
+/* SIGNATURE EFFECT */
+
+.signature{
+font-size:18px;
+margin-top:10px;
+color:#ccc;
+border-right:2px solid gold;
+width:0;
+overflow:hidden;
+white-space:nowrap;
+animation:typing 4s steps(30,end) forwards;
 }
 
-h2{
-font-size:32px;
-margin-bottom:30px;
-color:#ffcc00;
-letter-spacing:1px;
+@keyframes typing{
+to{width:260px;}
 }
 
-/* ===== CARDS ===== */
-.card{
-background:rgba(255,255,255,0.05);
-padding:35px;
-margin:20px auto;
-max-width:750px;
-border-radius:18px;
-backdrop-filter:blur(15px);
-transition:0.4s;
-box-shadow:0 0 20px rgba(255,204,0,0.1);
-}
+/* BUTTON */
 
-.card:hover{
-transform:translateY(-12px);
-box-shadow:0 0 40px rgba(255,204,0,0.5);
-}
-
-/* ===== SKILLS ===== */
-.skill{margin:18px 0;text-align:left;font-weight:500;}
-.bar{height:8px;background:#333;border-radius:20px;overflow:hidden;margin-top:6px;}
-.bar span{
-display:block;height:100%;
-background:linear-gradient(90deg,#ffcc00,#ffaa00);
-}
-
-/* ===== SOCIAL ICONS ===== */
-.social-icons{
+.royal-btn{
 margin-top:30px;
-display:flex;justify-content:center;
-gap:30px;flex-wrap:wrap;
+padding:12px 30px;
+border:none;
+background:linear-gradient(45deg,gold,#ffcc00);
+color:black;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+transition:.4s;
 }
 
-.social-icons a{
-color:#ffcc00;font-size:30px;
-transition:0.3s;
+.royal-btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px gold;
 }
 
-.social-icons a:hover{
+/* SOCIAL ICONS */
+
+.social{
+position:fixed;
+right:20px;
+top:50%;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.social a{
+color:gold;
+font-size:22px;
+transition:.3s;
+}
+
+.social a:hover{
 transform:scale(1.3);
 color:white;
 }
 
-/* ===== FOOTER ===== */
-footer{
-text-align:center;
-padding:30px;
-background:#000;
-color:#aaa;
+/* SCROLL REVEAL */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
 
-/* ===== MOBILE FIX ===== */
-@media(max-width:768px){
-.premium-name{font-size:34px;}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
+
 </style>
 </head>
 
 <body>
 
-<nav>
-<div><strong>Touhid Hassan</strong></div>
-<div>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#certifications">Achievements</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+<div id="loader">
+<div class="loader-text">ROYAL ELITE LOADING...</div>
 </div>
-</nav>
 
-<header>
-<div id="particles-js"></div>
-<img src="touhid.JPG" class="profile-photo">
+<div id="particles"></div>
 
-<h1 class="premium-name">Touhid Hassan</h1>
-
-<div class="typing"></div>
-
-<div class="social-icons">
-<a href="https://www.instagram.com/touhid_empire" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://t.me/KnightLucifer" target="_blank"><i class="fab fa-telegram"></i></a>
-<a href="https://www.snapchat.com/add/knight.lucifer" target="_blank"><i class="fab fa-snapchat"></i></a>
-<a href="https://wa.me/919332838418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<div class="social">
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
 </div>
-</header>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
-My goal is to become a successful doctor and contribute to society.
-I have achieved 1st position in an Intercity Debate Competition.
-</div>
+<section class="hero">
+<img src="profile.JPG" alt="Touhid Hassan">
+<h1>Touhid Hassan</h1>
+<div class="signature">Future Leader | Elite Visionary</div>
+<button class="royal-btn">Explore More</button>
 </section>
-
-<section id="education">
-<h2>Education</h2>
-<div class="card">
-Bachelor of Arts (B.A) - Completed
-</div>
-</section>
-
-<section id="certifications">
-<h2>Certifications & Achievements</h2>
-<div class="card">
-✔ Certificate in Computer Application <br><br>
-✔ Advanced Computer Skills Certification <br><br>
-✔ 1st Position - Intercity Debate Competition
-</div>
-</section>
-
-<section id="skills">
-<h2>Skills</h2>
-<div class="card">
-<div class="skill">Computer Applications<div class="bar"><span style="width:90%"></span></div></div>
-<div class="skill">Public Speaking<div class="bar"><span style="width:85%"></span></div></div>
-<div class="skill">Leadership<div class="bar"><span style="width:80%"></span></div></div>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-Email: monsternoddy@gmail.com <br><br>
-Email: touhidhassan418@gmail.com <br><br>
-Phone: 9332838418 <br><br>
-Location: Asansol, West Bengal, India
-</div>
-</section>
-
-<footer>
-© 2026 Touhid Hassan | Royal Elite Portfolio
-</footer>
 
 <script>
-new Typed(".typing",{
-strings:["Future Doctor","Debate Champion","Tech Enthusiast"],
-typeSpeed:60,
-backSpeed:40,
-loop:true
+
+/* Loader */
+
+window.addEventListener("load",function(){
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},2000);
 });
 
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-color:{value:"#ffcc00"},
-line_linked:{enable:true,color:"#ffcc00"},
-move:{speed:2}
+/* Particles */
+
+for(let i=0;i<60;i++){
+let particle=document.createElement("div");
+particle.classList.add("particle");
+particle.style.left=Math.random()*100+"%";
+particle.style.top=Math.random()*100+"%";
+particle.style.animationDuration=(5+Math.random()*10)+"s";
+document.getElementById("particles").appendChild(particle);
 }
-});
+
+/* Scroll Reveal */
+
+function reveal(){
+let reveals=document.querySelectorAll(".reveal");
+for(let i=0;i<reveals.length;i++){
+let windowHeight=window.innerHeight;
+let elementTop=reveals[i].getBoundingClientRect().top;
+if(elementTop<windowHeight-100){
+reveals[i].classList.add("active");
+}
+}
+}
+
+window.addEventListener("scroll",reveal);
+
 </script>
 
 </body>
