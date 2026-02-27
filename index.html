@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Touhid Hassan | Royal Elite Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
@@ -51,12 +51,6 @@ transition:0.3s;
 }
 nav a:hover::after{width:100%;}
 
-.toggle-btn{
-cursor:pointer;background:#ffcc00;border:none;
-padding:6px 14px;border-radius:20px;font-size:12px;
-margin-left:10px;font-weight:600;
-}
-
 header{
 height:100vh;display:flex;flex-direction:column;
 justify-content:center;align-items:center;text-align:center;
@@ -68,40 +62,35 @@ position:absolute;width:100%;height:100%;z-index:-1;
 }
 
 .profile-photo{
-width:190px;height:190px;border-radius:50%;
+width:180px;height:180px;border-radius:50%;
 border:3px solid #ffcc00;
-margin-bottom:20px;
-box-shadow:0 0 30px #ffcc00;
+margin-bottom:25px;
+box-shadow:0 0 40px rgba(255,204,0,0.6);
 transition:0.4s;
 }
 .profile-photo:hover{
-transform:scale(1.07);
-box-shadow:0 0 60px #ffcc00;
+transform:scale(1.08);
+box-shadow:0 0 70px rgba(255,204,0,0.9);
 }
 
-/* ===== ULTRA PREMIUM NAME STYLE ===== */
-.luxury-name{
-font-size:56px;
-font-weight:900;
+/* 🔥 ULTRA PREMIUM NAME STYLE */
+.hero-name{
+font-size:52px;
+font-weight:800;
 letter-spacing:2px;
-background:linear-gradient(90deg,#ffcc00,#ffd700,#fff5b1,#ffcc00);
-background-size:300% auto;
+background:linear-gradient(90deg,#ffcc00,#ffaa00,#fff2b3,#ffcc00);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-animation:shine 4s linear infinite;
-text-shadow:0 0 25px rgba(255,204,0,0.6);
-}
-
-@keyframes shine{
-0%{background-position:0% center;}
-100%{background-position:300% center;}
+text-shadow:0 0 25px rgba(255,204,0,0.5);
+margin-bottom:12px;
+white-space:nowrap;
 }
 
 .typing{
 color:#ffcc00;
-margin-top:12px;
 font-size:22px;
 font-weight:600;
+margin-top:5px;
 }
 
 section{
@@ -110,7 +99,7 @@ text-align:center;
 }
 
 h2{
-font-size:34px;
+font-size:32px;
 margin-bottom:30px;
 color:#ffcc00;
 letter-spacing:1px;
@@ -128,13 +117,15 @@ box-shadow:0 0 20px rgba(255,204,0,0.1);
 }
 .card:hover{
 transform:translateY(-12px);
-box-shadow:0 0 40px rgba(255,204,0,0.4);
+box-shadow:0 0 35px rgba(255,204,0,0.4);
 }
 
 .skill{margin:18px 0;text-align:left;font-weight:500;}
+
 .bar{
 height:8px;background:#333;
-border-radius:20px;overflow:hidden;margin-top:6px;
+border-radius:20px;overflow:hidden;
+margin-top:6px;
 }
 .bar span{
 display:block;height:100%;
@@ -156,15 +147,6 @@ transform:scale(1.3);
 color:white;
 }
 
-.cursor{
-width:18px;height:18px;
-border:2px solid #ffcc00;
-border-radius:50%;
-position:fixed;pointer-events:none;
-transform:translate(-50%,-50%);
-z-index:999;
-}
-
 footer{
 text-align:center;
 padding:30px;
@@ -177,7 +159,6 @@ color:#aaa;
 <body>
 
 <div id="loader">WELCOME TO MY ROYAL PORTFOLIO</div>
-<div class="cursor"></div>
 
 <nav>
 <div><strong>Touhid Hassan</strong></div>
@@ -187,14 +168,16 @@ color:#aaa;
 <a href="#certifications">Achievements</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
-<button class="toggle-btn" onclick="toggleMusic()">Music</button>
 </div>
 </nav>
 
 <header>
 <div id="particles-js"></div>
+
 <img src="touhid.JPG" class="profile-photo">
-<h1 class="luxury-name">Touhid Hassan</h1>
+
+<div class="hero-name">Touhid Hassan</div>
+
 <div class="typing"></div>
 
 <div class="social-icons">
@@ -209,13 +192,16 @@ color:#aaa;
 <h2>About Me</h2>
 <div class="card">
 I am a passionate and ambitious B.A graduate from Asansol, West Bengal. 
-My goal is to become a successful doctor and contribute to society.
+My goal is to become a successful doctor and contribute to society. 
+I have achieved 1st position in an Intercity Debate Competition and hold multiple certifications in Computer Applications.
 </div>
 </section>
 
 <section id="education">
 <h2>Education</h2>
-<div class="card">Bachelor of Arts (B.A) - Completed</div>
+<div class="card">
+Bachelor of Arts (B.A) - Completed
+</div>
 </section>
 
 <section id="certifications">
@@ -230,28 +216,27 @@ My goal is to become a successful doctor and contribute to society.
 <section id="skills">
 <h2>Skills</h2>
 <div class="card">
-<div class="skill">Computer Applications<div class="bar"><span style="width:90%"></span></div></div>
-<div class="skill">Public Speaking<div class="bar"><span style="width:85%"></span></div></div>
-<div class="skill">Leadership<div class="bar"><span style="width:80%"></span></div></div>
+<div class="skill">Computer Applications & MS Office<div class="bar"><span style="width:90%"></span></div></div>
+<div class="skill">Public Speaking & Debate<div class="bar"><span style="width:85%"></span></div></div>
+<div class="skill">Communication & Leadership<div class="bar"><span style="width:80%"></span></div></div>
+<div class="skill">Time Management<div class="bar"><span style="width:75%"></span></div></div>
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
+Email: monsternoddy@gmail.com <br><br>
 Email: touhidhassan418@gmail.com <br><br>
 Phone: 9332838418 <br><br>
-Location: Asansol, West Bengal
+Phone: 8389878532 <br><br>
+Location: Asansol, West Bengal, India
 </div>
 </section>
 
 <footer>
 © 2026 Touhid Hassan | Royal Elite Portfolio
 </footer>
-
-<audio id="bg-music" loop>
-<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8e6b0e7c0.mp3" type="audio/mpeg">
-</audio>
 
 <script>
 window.onload=function(){
@@ -264,11 +249,6 @@ loop:true
 });
 }
 
-function toggleMusic(){
-let music=document.getElementById("bg-music");
-music.paused?music.play():music.pause();
-}
-
 particlesJS("particles-js",{
 particles:{
 number:{value:60},
@@ -277,12 +257,6 @@ color:{value:"#ffcc00"},
 line_linked:{enable:true,color:"#ffcc00"},
 move:{speed:2}
 }
-});
-
-const cursor=document.querySelector(".cursor");
-document.addEventListener("mousemove",(e)=>{
-cursor.style.left=e.clientX+"px";
-cursor.style.top=e.clientY+"px";
 });
 </script>
 
